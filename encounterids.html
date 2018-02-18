@@ -500,7 +500,7 @@ allowedIds = [];
 baseIconUrl = 'https://pkmref.com/images/set_1/';
 
 update = function() {
-  allowedIds = allowedIds.sort();
+  allowedIds = allowedIds.sort(function(a, b){return a-b});
   $('#list').val('ENCOUNTER_IDS = (' + allowedIds.join() + ')');
   let names = allowedIds.map(function(i) { return pokemon[i.toString()]});
   $("#names").val(names.join(", "))
