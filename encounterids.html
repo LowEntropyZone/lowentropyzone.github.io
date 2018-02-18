@@ -524,11 +524,11 @@ $(document).ready(function() {
   i = 1;
   while (i < Object.keys(pokemon).length) {
     name = Object.keys(pokemon);
-    $('#images').append('<div class="poke" id="filter_' + i + '"><center><img src="' + baseIconUrl + i + '.png"/><br><button onclick="toggle(' + i + ')">Toggle</button></center></div>');
+    $('#images').append('<div class="poke" id="filter_' + i + '"><center><img src="' + baseIconUrl + i + '.png" onclick="toggle('+i+')"/><br><button onclick="toggle(' + i + ')">Toggle</button></center></div>');
     i++;
   }
   $("#images").append(`<input type="text" class="list" id="list" value="ENCOUNTER_IDS = ()"/><br>`);
-  $("#images").append(`<input type="text" class="list" id="names" value=""/><br>`)
+  $("#images").append(`<input type="text" class="list" id="names" value=""/><br><hr>`)
 });
 
 // ---
